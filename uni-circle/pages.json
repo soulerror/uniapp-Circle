@@ -1,0 +1,41 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	    {
+            "path" : "pages/static-demo",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/animation-page",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/other-page",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationStyle":"custom"
+	},
+	"tabBar":{
+		"color":"#333333",
+		"selectedColor":"#1A79A0",
+		"borderStyle":"black",
+		"backgroundColor":"#FFFFFF",
+		"height":"54px",
+		"list":[
+			{
+				"pagePath":"pages/static-demo",
+				"text":"静态效果"
+			},
+			{
+				"pagePath":"pages/animation-page",
+				"text":"动态加载"
+			},
+			{
+				"pagePath":"pages/other-page",
+				"text":"其他效果"
+			}
+		]
+		
+	}
+}
