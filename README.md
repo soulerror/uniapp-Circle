@@ -27,6 +27,13 @@ export default {
 </template>
 ```
 
+### 效果
+##### 无动画效果
+![alt](./picture/静态.png)
+##### 动画效果
+![alt](./picture/动态.gif)
+#####  其他
+![alt](./picture/其他.png)
 ### 属性文档
 
 | 属性|名称| 类型 | 默认值    | 备注  |
