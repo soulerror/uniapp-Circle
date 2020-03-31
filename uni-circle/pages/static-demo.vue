@@ -13,7 +13,7 @@
 			<cCircle  :size="70" :percent="70"></cCircle>
 			<cCircle  :size="100" :percent="100"></cCircle>
 			<cCircle  :size="70" :percent="70">
-				<span slot="content" style="text-align: center;">自定义文本</span>
+				<span slot="content" style="text-align: center;">Circle</span>
 			</cCircle> 
 			<cCircle  :size="70" :percent="70">
 				<img slot="content" style="height: 100%;width: 100%;border-radius: 50%;" src="/static/temp.jpg">

@@ -5,7 +5,7 @@
 		</view>
 		<view class="pli-card">
 
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="1">
+			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="1" >
 				<span slot="content">1</span>
 			</cCircle>
 			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="2">
@@ -26,8 +26,12 @@
 			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="50">
 				<span slot="content">50</span>
 			</cCircle>
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="100">
-				<span slot="content">100</span>
+			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="50" @onComplete="show" @animationPercent="getPercent">
+				<span v-show="!showImg" slot="content">{{percent}}%</span>
+				<img v-show="showImg" slot="content" style="height: 100%;width: 100%;border-radius: 50%;" src="/static/temp.jpg">
+			</cCircle>
+			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="100" >
+				<span slot="content">{{percent}}</span>
 			</cCircle>
 
 		</view>
@@ -43,11 +47,18 @@ import cCircle from "../components/cCircle.vue"
 		},
 		data() {
 			return {
-				
+				showImg:false,
+				percent:0
 			}
 		},
 		methods: {
-
+			show(){
+				console.log("执行完成");
+				this.showImg=true;
+			},
+			getPercent(animationPercent){
+				this.percent = animationPercent;
+			}
 		},
 		onShow() {
 		}

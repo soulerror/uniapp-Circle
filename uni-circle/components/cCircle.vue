@@ -33,13 +33,17 @@
 				var i = setInterval(()=>{
 					if(that.animationPercent>=that.percent){
 						clearInterval(i);
+						that.$emit('onComplete');
 					}
 					else{
 						that.animationPercent+=1;
+						that.$emit('animationPercent',that.animationPercent);
 					}
 					
 				},that.animationSpeed);
-			}
+			},
+
+			
 		},
 		props:{
 			size:{
@@ -73,6 +77,7 @@
 		},
 		computed:{
 			slot(){
+				
 				if(this.$slots.content){
 					return false;
 				}
@@ -123,7 +128,7 @@
 							 width:${size}px;
 							 border:${circleWidth}px ${percent>50?circleColor:defaultColor} solid;
 							 border-radius:50%;
-							 z-index:${percent>50?0:1};
+							 z-index:${percent>50?0:10};
 							 position:absolute;
 							 transform:rotate(${percent>50?percent/100*360:0}deg);
 							 clip:rect(0 ${circleWidth*2+size}px ${circleWidth*2+size}px ${(circleWidth*2+size)/2}px ); 
