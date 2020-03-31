@@ -27,6 +27,15 @@ export default {
 </template>
 ```
 
+### **示例**
+ **静态效果**
+![静态效果][1]
+
+**动态效果**
+![动态效果][2]
+**样式**
+![自定义样式][3]
+
 ###**属性文档**
 
 | 属性           | 名称         |  类型   | 默认值  | 备注                                          |
@@ -83,7 +92,7 @@ import cCircle from "../components/cCircle.vue"
 </script>
 ```
 ##### **效果**
-![此处输入图片的描述][1]
+![此处输入图片的描述][4]
 
 ###### **@animationPercent事件**
 ```
@@ -114,25 +123,27 @@ import cCircle from "../components/cCircle.vue"
 ```
 
 ##### **效果**
-![此处输入图片的描述][2]
+![此处输入图片的描述][5]
 
 ### **拓展插槽**
 ###### 具名插槽**：content**
 ###### 作用：自定义显示圆环中央的文本
-###### 例如：在圆环中央，不显示百分比，显示“Circle”字样：
+###### 例如：在圆环中央，不显示百分比，显示图片：
 ```
-<cCircle>
- <span slot="content" style="text-align: center;">Circle</span>
+<cCircle  :size="60" :percent="60"  @onComplete="show"  @animationPercent="getPercent">
+	<img slot="content" style="height: 100%;width: 100%;border-radius: 50%;" src="/static/temp.jpg">
 </cCircle> 
 ```
+##### **效果**
+![此处输入图片的描述][6]
 
-### 其他可能遇到的问题：
-#### 动画加载方案：
+### **其他可能遇到的问题**
+#### **动画加载方案**
 动画通过js定时器实现，传入的animationSpeed则是定时器的间隔时间，传入的值越大，那么动画加载完成的时间越长。默认在组件的mounted生命周期中调用。在Uniapp中，有的页面会只会加载一次，然后常驻，那么动画只会出现一次。比如，首页在不退出应用的情况下，通常就只加载一次，那么动画只会加载一次。如果在某个子页面调用了cCircle组件，进入该页面时，会加载，退出该页面时，销毁了该页面，那么下次进入这个页面时，动画会再次加载。如果不能满足你的需求，可以自己修改代码，根据你的需求，自己定制。
-#### 样式：
-样式是通过computed属性动态计算的样式，在极个别情况下，会受到外部元素的样式污染。如果遇到你遇到了样式污染的问题，可以尝试着修改一下父元素的样式，或者重写组件的样式，或者可以直接修改源码。
+#### **样式问题**
+样式是通过computed属性动态计算的样式，在极个别情况下，会受到外部元素的样式污染。如果遇到你遇到了样式污染的问题，可以尝试着修改一下父元素的样式，或者重写组件的样式，或者可以直接修改源码。（尤其注意全局样式问题，有童鞋遇到过这个问题）
 
-### 作者寄语：
+### **关于作者**
 作者QQ：1107837746
 
 如果有什么问题、意见或建议可以加作者QQ沟通。如果我有时间和能力的话，一定解决。
@@ -142,5 +153,9 @@ import cCircle from "../components/cCircle.vue"
 作者是一个菜鸟Java开发，偶尔鼓捣鼓捣前端，因为发现Uniapp插件市场没有能够满足自己需求的插件，所以本着 “自己动手，丰衣足食” 的理念，动手写了组件。其实 作者前端技术比较一般，如果组件中有什么问题，欢迎指正，一定虚心学习。如果能够满足你的需求，欢迎到Github给作者Star：https://github.com/YourExios/uniapp-Circle
 
 
-[1]: http://app.maikasai.com/onCompleteDemo.gif
-[2]: http://app.maikasai.com/animationPercent.gif
+[1]: http://app.maikasai.com/static.png
+[2]: http://app.maikasai.com/animation.gif
+[3]: http://app.maikasai.com/color.png
+[4]: http://app.maikasai.com/onCompleteDemo.gif
+[5]: http://app.maikasai.com/animationPercent.gif
+[6]: http://app.maikasai.com/slotImg.png
