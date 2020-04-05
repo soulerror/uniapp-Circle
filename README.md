@@ -30,6 +30,8 @@ export default {
 ### **示例**
 
 
+
+
  **静态效果**
 ![此处输入图片的描述][1]
 
@@ -40,11 +42,8 @@ export default {
 **动态效果**
 ![此处输入图片的描述][2]
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 040aa4d3aeb0484db569b232b3fbc8cd29bda802
 **样式**
 ![此处输入图片的描述][3]
 
@@ -175,13 +174,7 @@ import cCircle from "../components/cCircle.vue"
 [1]: http://app.maikasai.com/static.png
 [2]: http://app.maikasai.com/animation.gif
 [3]: http://app.maikasai.com/color.png
-<<<<<<< HEAD
 [4]: http://app.maikasai.com/direction.gif
 [5]: http://app.maikasai.com/onCompleteDemo.gif
 [6]: http://app.maikasai.com/animationPercent.gif
 [7]: http://app.maikasai.com/slotImg.png
-=======
-[4]: http://app.maikasai.com/onCompleteDemo.gif
-[5]: http://app.maikasai.com/animationPercent.gif
-[6]: http://app.maikasai.com/slotImg.png
->>>>>>> 040aa4d3aeb0484db569b232b3fbc8cd29bda802
