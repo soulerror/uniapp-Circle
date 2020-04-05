@@ -28,25 +28,41 @@ export default {
 ```
 
 ### **示例**
+
+
  **静态效果**
 ![此处输入图片的描述][1]
 
+
+
+
+
 **动态效果**
 ![此处输入图片的描述][2]
+
+
+
 **样式**
 ![此处输入图片的描述][3]
 
+
+
+**起始位置与方向**
+![此处输入图片的描述][4]
+
 ### **属性文档**
 
-| 属性           | 名称         |  类型   | 默认值  | 备注                                          |
-| -------------- | ------------ | :-----: | ------- | :-------------------------------------------- |
-| size           | 圆环大小     | Number  | 60      | 单位px                                        |
-| percent        | 百分比       | Number  | 0       | 0-100的整数，暂不支持小数                     |
-| circleColor    | 进度环颜色   | String  | #32CDA5 | 支持rgba写法，进度条颜色，百分比为0时，不显示 |
-| defaultColor   | 进度环背景色 | String  | #e9e9e9 | 支持rgba，圆环默认颜色，百分比为100时，不显示 |
-| circleWidth    | 圆环宽度     | String  | 5       | 单位px                                        |
-| animation      | 加载动画     | Boolean | false   | 是否开启动画加载，默认不开启                  |
-| animationSpeed | 动画速度     | Number  | 1       | 动画的加载间隔速度，默认1ms,值越大，加载越慢  |
+| 属性           | 名称         |  类型   | 默认值  | 备注                                                         |
+| -------------- | ------------ | :-----: | ------- | :----------------------------------------------------------- |
+| size           | 圆环大小     | Number  | 60      | 单位px                                                       |
+| percent        | 百分比       | Number  | 0       | 0-100的整数，暂不支持小数                                    |
+| circleColor    | 进度环颜色   | String  | #32CDA5 | 支持rgba写法，进度条颜色，百分比为0时，不显示                |
+| defaultColor   | 进度环背景色 | String  | #e9e9e9 | 支持rgba，圆环默认颜色，百分比为100时，不显示                |
+| circleWidth    | 圆环宽度     | String  | 5       | 单位px                                                       |
+| animation      | 加载动画     | Boolean | false   | 是否开启动画加载，默认不开启                                 |
+| animationSpeed | 动画速度     | Number  | 1       | 动画的加载间隔速度，默认1ms,值越大，加载越慢                 |
+| direction      | 进度起始位置 | Number  | 0       | 进度条起点位置，弧度制，范围为0-360之间，数值为180时，起点在上方 |
+| clockwise      | 进度方向     | Boolean | true    | 进度条加载方向，true为顺时针，false为逆时针                  |
 
 #### **使用注意事项**
 有同学加我QQ，问我为什么定义自定义颜色的时候，报错了，她的代码是这样的
@@ -92,7 +108,7 @@ import cCircle from "../components/cCircle.vue"
 </script>
 ```
 ##### **效果**
-![此处输入图片的描述][4]
+![此处输入图片的描述][5]
 
 ###### **@animationPercent事件**
 ```
@@ -123,7 +139,7 @@ import cCircle from "../components/cCircle.vue"
 ```
 
 ##### **效果**
-![此处输入图片的描述][5]
+![此处输入图片的描述][6]
 
 ### **拓展插槽**
 ###### 具名插槽**：content**
@@ -135,7 +151,7 @@ import cCircle from "../components/cCircle.vue"
 </cCircle> 
 ```
 ##### **效果**
-![此处输入图片的描述][6]
+![此处输入图片的描述][7]
 
 ### **其他可能遇到的问题**
 #### **动画加载方案**
@@ -156,6 +172,7 @@ import cCircle from "../components/cCircle.vue"
 [1]: http://app.maikasai.com/static.png
 [2]: http://app.maikasai.com/animation.gif
 [3]: http://app.maikasai.com/color.png
-[4]: http://app.maikasai.com/onCompleteDemo.gif
-[5]: http://app.maikasai.com/animationPercent.gif
-[6]: http://app.maikasai.com/slotImg.png
+[4]: http://app.maikasai.com/direction.gif
+[5]: http://app.maikasai.com/onCompleteDemo.gif
+[6]: http://app.maikasai.com/animationPercent.gif
+[7]: http://app.maikasai.com/slotImg.png
