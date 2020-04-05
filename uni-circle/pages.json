@@ -12,6 +12,10 @@
             "path" : "pages/other-page",
             "style" : {}
         }
+        ,{
+            "path" : "pages/direction",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationStyle":"custom"
@@ -30,6 +34,11 @@
 			{
 				"pagePath":"pages/animation-page",
 				"text":"动态加载"
+			},
+			{	
+				"pagePath":"pages/direction",
+				
+				"text":"自定义方向"
 			},
 			{
 				"pagePath":"pages/other-page",

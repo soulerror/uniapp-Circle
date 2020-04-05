@@ -4,16 +4,16 @@
 			Uni-Circle
 		</view>
 		<view class="pli-card">
-			<cCircle  :size="40" :percent="40"></cCircle>
-			<cCircle  :size="45" :percent="45"></cCircle>
-			<cCircle  :size="50" :percent="50"></cCircle>
+			<cCircle  :size="40" :percent="40" ></cCircle>
+			<cCircle  :size="45" :percent="45" ></cCircle>
+			<cCircle  :size="50" :percent="50" ></cCircle>
 			<cCircle  :size="55" :percent="55"></cCircle>
 			<cCircle  :size="60" :percent="60"></cCircle>
 			<cCircle  :size="65" :percent="65"></cCircle>
 			<cCircle  :size="70" :percent="70"></cCircle>
 			<cCircle  :size="100" :percent="100"></cCircle>
 			<cCircle  :size="70" :percent="70">
-				<span slot="content" style="text-align: center;">Circle</span>
+				<span slot="content">Circle</span>
 			</cCircle> 
 			<cCircle  :size="70" :percent="70">
 				<img slot="content" style="height: 100%;width: 100%;border-radius: 50%;" src="/static/temp.jpg">

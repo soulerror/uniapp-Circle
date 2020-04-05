@@ -12,8 +12,8 @@
 			</view>
 			
 			<view>
-				<cCircle  :percent="60" defaultColor="red">
-					<span slot="content">Red</span>
+				<cCircle  :percent="60" defaultColor="black">
+					<span slot="content">black</span>
 				</cCircle>
 				圆环颜色
 			</view>
@@ -38,7 +38,6 @@ import cCircle from "../components/cCircle.vue"
 		},
 		data() {
 			return {
-			
 			}
 		},
 		methods: {

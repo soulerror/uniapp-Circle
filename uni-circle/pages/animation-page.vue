@@ -5,7 +5,7 @@
 		</view>
 		<view class="pli-card">
 
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="1" >
+		 <cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="1" >
 				<span slot="content">1</span>
 			</cCircle>
 			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="2">
@@ -27,11 +27,12 @@
 				<span slot="content">50</span>
 			</cCircle>
 			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="50" @onComplete="show" @animationPercent="getPercent">
-				<span v-show="!showImg" slot="content">{{percent}}%</span>
-				<img v-show="showImg" slot="content" style="height: 100%;width: 100%;border-radius: 50%;" src="/static/temp.jpg">
-			</cCircle>
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="100" >
-				<span slot="content">{{percent}}</span>
+				<!-- <span v-show="!showImg" slot="content">{{percent}}%</span> -->
+				<img slot="content" style="height: 100%;width: 100%;border-radius: 50%;" src="/static/temp.jpg">
+			</cCircle> 
+			
+		<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="100" @animationPercent="getPercent">
+				<span slot="content" style="color: #32CDA5;">{{percent}}</span>
 			</cCircle>
 
 		</view>
