@@ -23,7 +23,7 @@
 			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="10">
 				<span slot="content">10</span>
 			</cCircle>
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="50">
+			<cCircle  :size="60" :percent="90" :animation="true" :animationSpeed="50">
 				<span slot="content">50</span>
 			</cCircle>
 			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="50" @onComplete="show" @animationPercent="getPercent">

@@ -4,6 +4,7 @@
 			Uni-Circle
 		</view>
 		<view class="pli-card">
+			<cCircle  :size="40" :percent="10" ></cCircle>
 			<cCircle  :size="40" :percent="40" ></cCircle>
 			<cCircle  :size="45" :percent="45" ></cCircle>
 			<cCircle  :size="50" :percent="50" ></cCircle>

@@ -4,8 +4,9 @@
 			<text v-if="!slot">{{animationPercent}}%</text>
 			<view  :style="slotStyle" v-if="slot"><slot name="content"></slot></view>
 			<view  :style="faStyle">
-				
-				<view  :style="leftStyle"></view>
+				<view :style="leftBox">
+					<view  :style="leftStyle"></view>
+				</view>
 				 <view :style="rithStyle"></view>
 			</view>
 		</view>
@@ -110,11 +111,11 @@
 				var style=
 					`	
 						position:relative !important;
-						height:${circleWidth*2+size}px;
-						width:${circleWidth*2+size}px;
-						display:flex;
-						justify-content: center;
-						align-items: center;
+						height:${circleWidth*2+size}px !important;
+						width:${circleWidth*2+size}px !important;
+						display:flex !important;
+						justify-content: center !important;
+						align-items: center !important;
 					`;
 					return style;
 			},
@@ -123,12 +124,12 @@
 				var circleWidth = this.circleWidth;
 				var style=
 					`
-						border-radius:50%;
-						height:${size}px;
-						width:${size}px;
-						display:flex;
-						justify-content: center;
-						align-items: center;
+						border-radius:50% !important;
+						height:${size}px !important;
+						width:${size}px !important;
+						display:flex !important;
+						justify-content: center !important;
+						align-items: center !important;
 					`;
 					return style;
 			},
@@ -140,16 +141,32 @@
 				var clockwise = this.clockwise;
 				var style = `
 							 position:absolute !important;
-							 border-radius:50%;
-							 display:flex;
-							 justify-content: center;
-							 align-items: center;
-							 height:${size}px;
-							 width:${size}px;
-							 border:${circleWidth}px ${defaultColor} solid;
-							 transform:rotate(${direction}deg) rotateY(${clockwise?0:180}deg);
+							 border-radius:50% !important;
+							 display:flex !important;
+							 justify-content: center !important;
+							 align-items: center !important;
+							 top:0 !important;
+							 left:0 !important;
+							 height:${size}px !important;
+							 width:${size}px !important;
+							 border:${circleWidth}px ${defaultColor} solid !important;
+							 transform:rotate(${direction}deg) rotateY(${clockwise?0:180}deg) !important;
 							 
 							`;
+				return style;
+			},
+			leftBox(){
+				var size = this.size;
+				var circleWidth = this.circleWidth;
+				var style=`
+					height:${circleWidth*2+size}px !important;
+					width:${circleWidth*2+size}px !important;
+					position:absolute !important;
+					top:-${circleWidth}px !important;
+					left:-${circleWidth}px !important;
+					opacity:1 !important;
+					clip:rect(0 ${(circleWidth*2+size)/2}px ${(circleWidth*2+size)}px 0) !important;
+				`;
 				return style;
 			},
 			leftStyle(){
@@ -167,15 +184,14 @@
 					border-radius:50% !important; 
 					z-index:0 !important;
 					position:absolute !important;
-					top:-{circleWidth}px;
-					left:-{circleWidth}px;
+					top:0px !important;
+					left:0px !important;
 					transform:rotate(${percent>50?180:(percent/100*360)}deg) !important;
 					clip:rect(0 ${circleWidth*2+size}px ${circleWidth*2+size}px ${(circleWidth*2+size)/2}px ) !important;
 					`;
 				return style;
 			},
 			rithStyle(){
-				
 				var direction = this.direction;
 				var size = this.size;
 				var circleColor = this.circleColor;
@@ -185,12 +201,13 @@
 				var style= `
 							 height:${size}px !important;
 							 width:${size}px !important;
+							 position:absolute;
 							 border:${circleWidth}px ${percent>50?circleColor:defaultColor} solid !important;
 							 border-radius:50% !important;
-							 z-index:${percent>50?0:10} !important;
+							 z-index:${percent>50?0:100} !important;
 							 position:absolute !important;
-							 top:-{circleWidth}px;
-							 right:-{circleWidth}px;
+							 top:-${circleWidth}px;
+							 left:-${circleWidth}px;
 							 transform:rotate(${percent>50?percent/100*360:0}deg) !important;
 							 clip:rect(0 ${circleWidth*2+size}px ${circleWidth*2+size}px ${(circleWidth*2+size)/2}px ) !important; 
 							`;
