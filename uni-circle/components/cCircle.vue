@@ -97,6 +97,9 @@
 			}
 		},
 		computed:{
+			sizeAdapter(){
+				return  this.size%2==0?this.size:(this.size-1);				
+			},
 			slot(){
 				
 				if(this.$slots.content){
@@ -106,7 +109,7 @@
 			},
 			cBox(){
 				
-				var size=this.size;
+				var size=this.sizeAdapter;
 				var circleWidth = this.circleWidth;
 				var style=
 					`	
@@ -120,7 +123,7 @@
 					return style;
 			},
 			slotStyle(){
-				var size=this.size;
+				var size=this.sizeAdapter;
 				var circleWidth = this.circleWidth;
 				var style=
 					`
@@ -134,7 +137,7 @@
 					return style;
 			},
 			faStyle(){
-				var size= this.size;
+				var size= this.sizeAdapter;
 				var circleWidth = this.circleWidth;
 				var defaultColor = this.defaultColor;
 				var direction = this.direction;
@@ -151,12 +154,11 @@
 							 width:${size}px !important;
 							 border:${circleWidth}px ${defaultColor} solid !important;
 							 transform:rotate(${direction}deg) rotateY(${clockwise?0:180}deg) !important;
-							 
 							`;
 				return style;
 			},
 			leftBox(){
-				var size = this.size;
+				var size = this.sizeAdapter;
 				var circleWidth = this.circleWidth;
 				var style=`
 					height:${circleWidth*2+size}px !important;
@@ -172,7 +174,7 @@
 			leftStyle(){
 				var top = this.top;
 				var clockwise = this.clockwise;
-				var size = this.size;
+				var size = this.sizeAdapter;
 				var circleColor = this.circleColor;
 				var circleWidth = this.circleWidth;
 				var percent = this.animation?this.animationPercent:this.percent;
@@ -193,7 +195,7 @@
 			},
 			rithStyle(){
 				var direction = this.direction;
-				var size = this.size;
+				var size = this.sizeAdapter;
 				var circleColor = this.circleColor;
 				var defaultColor = this.defaultColor;
 				var circleWidth = this.circleWidth;
