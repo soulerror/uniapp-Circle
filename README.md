@@ -171,10 +171,10 @@ import cCircle from "../components/cCircle.vue"
 作者是一个菜鸟Java开发，偶尔鼓捣鼓捣前端，因为发现Uniapp插件市场没有能够满足自己需求的插件，所以本着 “自己动手，丰衣足食” 的理念，动手写了组件。其实 作者前端技术比较一般，如果组件中有什么问题，欢迎指正，一定虚心学习。如果能够满足你的需求，欢迎到Github给作者Star：https://github.com/YourExios/uniapp-Circle
 
 
-[1]: https://cdn.icuzz.com/static.png
-[2]: https://cdn.icuzz.com/animation.gif
-[3]: https://cdn.icuzz.com/color.png
-[4]: https://cdn.icuzz.com/direction.gif
-[5]: https://cdn.icuzz.com/onCompleteDemo.gif
-[6]: https://cdn.icuzz.com/animationPercent.gif
-[7]: https://cdn.icuzz.com/slotImg.png
+[1]: https://cdn.icuzz.com/uniapp/static.png
+[2]: https://cdn.icuzz.com/uniapp/animation.gif
+[3]: https://cdn.icuzz.com/uniapp/color.png
+[4]: https://cdn.icuzz.com/uniapp/direction.gif
+[5]: https://cdn.icuzz.com/uniapp/onCompleteDemo.gif
+[6]: https://cdn.icuzz.com/uniapp/animationPercent.gif
+[7]: https://cdn.icuzz.com/uniapp/slotImg.png
