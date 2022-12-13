@@ -168,7 +168,7 @@ import cCircle from "../components/cCircle.vue"
 
 不满足你的需求，可以任意修改，组件很简单，修改起来也不复杂。
 
-作者是一个菜鸟Java开发，偶尔鼓捣鼓捣前端，因为发现Uniapp插件市场没有能够满足自己需求的插件，所以本着 “自己动手，丰衣足食” 的理念，动手写了组件。其实 作者前端技术比较一般，如果组件中有什么问题，欢迎指正，一定虚心学习。如果能够满足你的需求，欢迎到Github给作者Star：https://github.com/YourExios/uniapp-Circle
+作者是一个菜鸟Java开发，偶尔鼓捣鼓捣前端，因为发现Uniapp插件市场没有能够满足自己需求的插件，所以本着 “自己动手，丰衣足食” 的理念，动手写了组件。其实 作者前端技术比较一般，如果组件中有什么问题，欢迎指正，一定虚心学习。如果能够满足你的需求，欢迎到Github给作者Star：https://github.com/soulerror/uniapp-Circle
 
 
 [1]: https://cdn.icuzz.com/uniapp/static.png
