@@ -5,23 +5,23 @@
 		</view>
 		<view class="pli-card">
 			<view>
-				<cCircle  :percent="60" circleColor="cyan">
+				<Circle  :percent="60" circleColor="cyan">
 					<span slot="content">Cyan</span>
-				</cCircle>
+				</Circle>
 				进度条颜色
 			</view>
 			
 			<view>
-				<cCircle  :percent="60" defaultColor="black">
+				<Circle  :percent="60" defaultColor="black">
 					<span slot="content">black</span>
-				</cCircle>
+				</Circle>
 				圆环颜色
 			</view>
 			
 			<view>
-				<cCircle  :percent="60" :circleWidth="10">
+				<Circle  :percent="60" :circleWidth="10">
 					<span slot="content">10px</span>
-				</cCircle>
+				</Circle>
 				圆环宽度
 			</view>
 			
@@ -31,10 +31,10 @@
 
 <script>
 
-import cCircle from "../components/cCircle.vue"
+import Circle from "../components/Circle.vue"
 	export default {
 		components:{
-			cCircle
+			Circle
 		},
 		data() {
 			return {

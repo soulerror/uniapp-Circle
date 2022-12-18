@@ -5,38 +5,38 @@
 		</view>
 		<view class="pli-card">
 			<view style="width: 100%;">顺时针</view>
-			<cCircle  :size="60" :percent="50" :direction="30" :animation="true" :animationSpeed="50">
+			<Circle  :size="60" :percent="50" :direction="30" :animation="true" :animationSpeed="50">
 				<span slot="content">30</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="50" :direction="60" :animation="true" :animationSpeed="50">
+			</Circle>
+			<Circle  :size="60" :percent="50" :direction="60" :animation="true" :animationSpeed="50">
 				<span slot="content">60</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="50" :direction="90" :animation="true" :animationSpeed="50">
+			</Circle>
+			<Circle  :size="60" :percent="50" :direction="90" :animation="true" :animationSpeed="50">
 				<span slot="content">90</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="50" :direction="180" :animation="true" :animationSpeed="50">
+			</Circle>
+			<Circle  :size="60" :percent="50" :direction="180" :animation="true" :animationSpeed="50">
 				<span slot="content">180</span>
-			</cCircle>
+			</Circle>
 			<view style="width: 100%;">逆时针</view>
-			<cCircle  :size="60" :percent="50" :direction="30" :animation="true" :clockwise="false" :animationSpeed="50">
+			<Circle  :size="60" :percent="50" :direction="30" :animation="true" :clockwise="false" :animationSpeed="50">
 				<span slot="content">30</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="50" :direction="60" :animation="true" :clockwise="false" :animationSpeed="50">
+			</Circle>
+			<Circle  :size="60" :percent="50" :direction="60" :animation="true" :clockwise="false" :animationSpeed="50">
 				<span slot="content">60</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="50" :direction="90" :animation="true" :clockwise="false" :animationSpeed="50">
+			</Circle>
+			<Circle  :size="60" :percent="50" :direction="90" :animation="true" :clockwise="false" :animationSpeed="50">
 				<span slot="content">90</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="50" :direction="180" :animation="true" :clockwise="false" :animationSpeed="50">
+			</Circle>
+			<Circle  :size="60" :percent="50" :direction="180" :animation="true" :clockwise="false" :animationSpeed="50">
 				<span slot="content">180</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="60" :direction="180" :animation="true" :animationSpeed="50" @onComplete="show" >
+			</Circle>
+			<Circle  :size="60" :percent="60" :direction="180" :animation="true" :animationSpeed="50" @onComplete="show" >
 				<img slot="content" style="height: 100%;width: 100%;border-radius: 50%;" src="/static/temp.jpg">
-			</cCircle> 
+			</Circle> 
 			
-		<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="100" @animationPercent="getPercent">
+		<Circle  :size="60" :percent="60" :animation="true" :animationSpeed="100" @animationPercent="getPercent">
 				<span slot="content" style="color: #32CDA5;">{{percent}}</span>
-			</cCircle>
+			</Circle>
 
 		</view>
 	</view>
@@ -44,10 +44,10 @@
 
 <script>
 
-import cCircle from "../components/cCircle.vue"
+import Circle from "../components/Circle.vue"
 	export default {
 		components:{
-			cCircle
+			Circle
 		},
 		data() {
 			return {

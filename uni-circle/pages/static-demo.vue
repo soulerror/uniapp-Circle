@@ -4,36 +4,36 @@
 			Uni-Circle
 		</view>
 		<view class="pli-card">
-			<cCircle  :size="40" :percent="10" ></cCircle>
-			<cCircle  :size="40" :percent="40" ></cCircle>
-			<cCircle  :size="45" :percent="45" ></cCircle>
-			<cCircle  :size="50" :percent="50" ></cCircle>
-			<cCircle  :size="55" :percent="55"></cCircle>
-			<cCircle  :size="60" :percent="60"></cCircle>
-			<cCircle  :size="65" :percent="65"></cCircle>
-			<cCircle  :size="70" :percent="70"></cCircle>
-			<cCircle  :size="100" :percent="100"></cCircle>
-			<cCircle  :size="70" :percent="70">
+			<Circle  :size="40" :percent="10" ></Circle>
+			<Circle  :size="40" :percent="40" ></Circle>
+			<Circle  :size="45" :percent="45" ></Circle>
+			<Circle  :size="50" :percent="50" ></Circle>
+			<Circle  :size="55" :percent="55"></Circle>
+			<Circle  :size="60" :percent="60"></Circle>
+			<Circle  :size="65" :percent="65"></Circle>
+			<Circle  :size="70" :percent="70"></Circle>
+			<Circle  :size="100" :percent="100"></Circle>
+			<Circle  :size="70" :percent="70">
 				<span slot="content">Circle</span>
-			</cCircle> 
-			<cCircle  :size="70" :percent="70">
+			</Circle> 
+			<Circle  :size="70" :percent="70">
 				<img slot="content" style="height: 100%;width: 100%;border-radius: 50%;" src="/static/temp.jpg">
-			</cCircle>
-			<cCircle  :size="70" :percent="100">
+			</Circle>
+			<Circle  :size="70" :percent="100">
 				<span slot="content" style="text-align: center;">
 					 <icon slot="content" type="success_no_circle" color="#32CDA5" size="26"/>
 				</span>
-			</cCircle> 
+			</Circle> 
 		</view>
 	</view>
 </template>
 
 <script>
 
-import cCircle from "../components/cCircle.vue"
+import Circle from "../components/Circle.vue"
 	export default {
 		components:{
-			cCircle
+			Circle
 		},
 		data() {
 			return {

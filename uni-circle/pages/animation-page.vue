@@ -5,35 +5,35 @@
 		</view>
 		<view class="pli-card">
 
-		 <cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="1" >
+		 <Circle  :size="60" :percent="60" :animation="true" :animationSpeed="1" >
 				<span slot="content">1</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="2">
+			</Circle>
+			<Circle  :size="60" :percent="60" :animation="true" :animationSpeed="2">
 				<span slot="content">2</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="3">
+			</Circle>
+			<Circle  :size="60" :percent="60" :animation="true" :animationSpeed="3">
 				<span slot="content">3</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="4">
+			</Circle>
+			<Circle  :size="60" :percent="60" :animation="true" :animationSpeed="4">
 				<span slot="content">4</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="5">
+			</Circle>
+			<Circle  :size="60" :percent="60" :animation="true" :animationSpeed="5">
 				<span slot="content">5</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="10">
+			</Circle>
+			<Circle  :size="60" :percent="60" :animation="true" :animationSpeed="10">
 				<span slot="content">10</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="90" :animation="true" :animationSpeed="50">
+			</Circle>
+			<Circle  :size="60" :percent="90" :animation="true" :animationSpeed="50">
 				<span slot="content">50</span>
-			</cCircle>
-			<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="50" @onComplete="show" @animationPercent="getPercent">
+			</Circle>
+			<Circle  :size="60" :percent="60" :animation="true" :animationSpeed="50" @onComplete="show" @animationPercent="getPercent">
 				<!-- <span v-show="!showImg" slot="content">{{percent}}%</span> -->
 				<img slot="content" style="height: 100%;width: 100%;border-radius: 50%;" src="/static/temp.jpg">
-			</cCircle> 
+			</Circle> 
 			
-		<cCircle  :size="60" :percent="60" :animation="true" :animationSpeed="100" @animationPercent="getPercent">
+		<Circle  :size="60" :percent="60" :animation="true" :animationSpeed="100" @animationPercent="getPercent">
 				<span slot="content" style="color: #32CDA5;">{{percent}}</span>
-			</cCircle>
+			</Circle>
 
 		</view>
 	</view>
@@ -41,10 +41,10 @@
 
 <script>
 
-import cCircle from "../components/cCircle.vue"
+import Circle from "../components/Circle.vue"
 	export default {
 		components:{
-			cCircle
+			Circle
 		},
 		data() {
 			return {
